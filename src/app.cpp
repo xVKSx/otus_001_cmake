@@ -1,4 +1,5 @@
 #include "app.h"
+#include "version.h"
 #include <string>
 
 std::string AppVersion(bool with_tweak_part) {
@@ -10,17 +11,17 @@ std::string AppVersion(bool with_tweak_part) {
 }
 
 std::string AppVersionMajor() {
-    return "4";
+    return !std::string(APP_VERSION_MAJOR).empty() ? APP_VERSION_MAJOR : APP_VERSION_PART_UNDEFINED;
 }
 
 std::string AppVersionMinor() {
-    return "3";
+    return !std::string(APP_VERSION_MINOR).empty() ? APP_VERSION_MINOR : APP_VERSION_PART_UNDEFINED;
 }
 
 std::string AppVersionPatch() {
-    return "2";
+    return !std::string(APP_VERSION_PATCH).empty() ? APP_VERSION_PATCH : APP_VERSION_PART_UNDEFINED;
 }
 
 std::string AppVersionTweak() {
-    return "1";
+    return !std::string(APP_VERSION_TWEAK).empty() ? APP_VERSION_TWEAK : APP_VERSION_PART_UNDEFINED;
 }
