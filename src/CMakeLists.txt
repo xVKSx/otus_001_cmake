@@ -1,10 +1,6 @@
 cmake_minimum_required(VERSION 3.2)
 
-project(hello_world)
-
-set(PROJECT_VERSION_MAJOR 0)
-set(PROJECT_VERSION_MINOR 0)
-set(PROJECT_VERSION_PATCH $ENV{TRAVIS_BUILD_NUMBER})
+project(hello_world VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
 add_definitions(-DAPP_VERSION_MAJOR="${PROJECT_VERSION_MAJOR}")
 add_definitions(-DAPP_VERSION_MINOR="${PROJECT_VERSION_MINOR}")
