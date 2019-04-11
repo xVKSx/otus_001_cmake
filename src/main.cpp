@@ -2,7 +2,7 @@
 #include <iostream>
 
 int main() {
-    std::cout << "build " << AppVersion() << '\n';
+    std::cout << "build " << AppVersionPatch() << '\n';
     std::cout << "Hello, World!" << '\n';
 
     return 0;
