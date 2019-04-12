@@ -26,5 +26,4 @@ target_link_libraries(test_version hw_app)
 target_link_libraries(test_version ${Boost_LIBRARIES})
 
 enable_testing()
-
 add_test(${PROJECT_NAME}_executable test_version)
